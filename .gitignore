@@ -1,0 +1,38 @@
+# === Java / Spring Boot ===
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven Wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# Logs
+*.log
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# === Node / React (Frontend) ===
+node_modules/
+dist/
+build/
+
+# Lock files (optional if you don’t want to track)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === Environment / Secrets ===
+.env
