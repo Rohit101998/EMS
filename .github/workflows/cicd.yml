@@ -27,8 +27,8 @@ jobs:
 
       - name: Build & Push Backend Docker Image
         run: |
-           docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/ems_backend ./ems_backend
-           docker push ${{ secrets.DOCKER_USERNAME }}/ems_backend
+          docker build -f ems_backend/Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/ems_backend ./ems_backend
+          docker push ${{ secrets.DOCKER_USERNAME }}/ems_backend
 
   frontend:
     name: Build & Deploy Frontend
@@ -58,7 +58,7 @@ jobs:
         with:
           publish-dir: ./ems-frontend/build
           production-branch: main
-          github-token: ${{ secrets.MY_GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           alias: main
         env:
