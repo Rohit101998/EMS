@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Backend JAR
         run: |
-          cd C:\Users\RohitPatil\OneDrive - Atyeti Inc\Desktop\EMS\ems_backend
+          cd ems_backend
           mvn clean package -DskipTests
 
       - name: Login to DockerHub
