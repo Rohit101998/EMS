@@ -19,10 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build & Push Docker Image
+      - name: Build & Push Backend Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/ems_backend ./ems_backend
-          docker push ${{ secrets.DOCKER_USERNAME }}/ems_backend
+         docker build -t ${{ secrets.DOCKER_USERNAME }}/ems_backend -f ems_backend/Dockerfile ./ems_backend
+         docker push ${{ secrets.DOCKER_USERNAME }}/ems_backend
+
 
 
       - name: Login to DockerHub
