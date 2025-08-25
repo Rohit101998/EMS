@@ -19,10 +19,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the build JAR file from the build stage
-COPY --from=build /app/target/ems_backend-0.0.1-SNAPSHOT.jar .
+COPY --from=build /app/target/ems_backend-0.0.1-SNAPSHOT.jar app.jar.
 
 # Expose port 8080
 EXPOSE 8080
 
 # Specify the command to run the application
-ENTRYPOINT ["java", "-jar", "/app/ems_backend-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
