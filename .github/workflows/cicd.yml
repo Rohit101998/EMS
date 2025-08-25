@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Backend JAR
         run: |
-          cd ems_backend
+          cd ems_backend\ems_backend
           mvn clean package -DskipTests
 
       - name: Login to DockerHub
@@ -49,15 +49,19 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: cd frontend && npm install
+        run: |
+          cd ems-frontend
+          npm install
 
       - name: Build React App
-        run: cd frontend && npm run build
+        run: |
+          cd ems-frontend
+          npm run build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
-          publish-dir: ./frontend/build
+          publish-dir: ./ems-frontend/build
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
