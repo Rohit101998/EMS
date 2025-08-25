@@ -20,7 +20,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build Backend JAR
-        run: cd ems_backend && mvn clean package -DskipTests
+      - run: |
+             cd ems_backend
+             mvn clean package -DskipTests
+
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
