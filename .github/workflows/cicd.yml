@@ -45,7 +45,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ems-frontend
+          cd ./ems-frontend
           npm install
 
       - name: Build React App
