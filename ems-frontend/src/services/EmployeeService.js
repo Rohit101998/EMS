@@ -20,6 +20,10 @@ const API_URL = import.meta.env.VITE_API_URL;
 // Keep `/api/employees` since backend expects it
 const REST_API_BASE_URL = `${API_URL}/api/employees`;
 
+console.log("API_URL =>", API_URL);
+console.log("REST_API_BASE_URL =>", REST_API_BASE_URL);
+
+
 export const listEmployees = () => axios.get(REST_API_BASE_URL);
 export const createEmployee = (employee) => axios.post(REST_API_BASE_URL, employee);
 export const getEmployee = (employeeId) => axios.get(`${REST_API_BASE_URL}/${employeeId}`);
