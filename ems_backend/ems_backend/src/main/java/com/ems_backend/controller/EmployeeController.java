@@ -15,7 +15,7 @@ import java.util.List;
 @CrossOrigin(origins = "https://luxury-platypus-a65c4f.netlify.app/")
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/employees")
+@RequestMapping("/employees")
 public class EmployeeController {
 
     @Autowired
