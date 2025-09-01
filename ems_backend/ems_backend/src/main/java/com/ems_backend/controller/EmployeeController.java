@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://playful-pudding-3eded7.netlify.app/")
+@CrossOrigin(origins = "https://benevolent-choux-5a52fc.netlify.app/")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/employees")
@@ -25,7 +25,7 @@ public class EmployeeController {
     public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto){
         EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
-        
+
     }
 
     @GetMapping("/{id}")
