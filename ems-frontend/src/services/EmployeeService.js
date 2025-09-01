@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
-const REST_API_BASE_URL = `${API_URL}/employees`;
+const REST_API_BASE_URL = `${API_URL}/api/employees`;
 
 export const listEmployees = () => axios.get(REST_API_BASE_URL);
 
