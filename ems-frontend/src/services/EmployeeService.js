@@ -18,6 +18,8 @@ import axios from "axios";
 const REST_API_BASE_URL = `${import.meta.env.VITE_API_URL}/api/employees`;
 
 console.log(import.meta.env.VITE_API_URL);
+console.log("VITE_API_URL =>", import.meta.env.VITE_API_URL);
+console.log("Rohit");
 
 
 export const listEmployees = () => axios.get(REST_API_BASE_URL);
